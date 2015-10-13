@@ -1,0 +1,6 @@
+Jogo.create(descricao: 'GTA V', foto: 'http://imageshack.com/a/img901/143/ZaP93j.png', console: 'Playstation 3')
+Jogo.create(descricao: 'Fifa 2015', foto: 'http://imageshack.com/a/img908/2989/1J3pKY.jpg', console: 'Playstation 3')
+Jogo.create(descricao: 'Risen 3', foto: 'http://imageshack.com/a/img903/8752/7OMkJE.jpg', console: 'Playstation 3')
+Jogo.create(descricao: 'Lego - Batman 3', foto: 'http://imageshack.com/a/img901/9920/qeqIzV.jpg', console: 'Playstation 3')
+Jogo.create(descricao: 'Tomb Raider', foto: 'http://imageshack.com/a/img633/8210/H61IDA.jpg', console: 'Playstation 3')
+Jogo.create(descricao: 'Assassins Creed', foto: 'http://imagizer.imageshack.us/a/img909/6671/VxWAiu.jpg', console: 'Playstation 3')

@@ -1,0 +1,17 @@
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: exgame_dev
+  pool: 5
+  username: postgres
+  password: 961167
+
+production:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: exgame
+  pool: 5
+  username: postgres
+  password: 961167
