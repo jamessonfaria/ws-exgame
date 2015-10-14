@@ -1,0 +1,13 @@
+
+### CADASTRO DOS JOGOS - GET
+https://srvwebservice.herokuapp.com/api/v1/jogos
+
+### LISTAGEM DOS PERFIS - GET 
+https://srvwebservice.herokuapp.com/api/v1/perfils
+
+### CADASTRO DO PERFIL - POST 
+https://srvwebservice.herokuapp.com/api/v1/perfils
+
+### ATUALIZACAO DO PERFIL - PUT
+https://srvwebservice.herokuapp.com/api/v1/perfils/:id
+
