@@ -1,13 +1,30 @@
 
-### CADASTRO DOS JOGOS - GET
-https://srvwebservice.herokuapp.com/api/v1/jogos
+### JOGO ### 
+- Listagem geral dos jogos 		(GET)    => https://srvwebservice.herokuapp.com/api/v1/jogos
+- Listagem de um jogo 			(GET)    => https://srvwebservice.herokuapp.com/api/v1/jogos/id
 
-### LISTAGEM DOS PERFIS - GET 
-https://srvwebservice.herokuapp.com/api/v1/perfils
+### PERFIL ###
+- Listagem geral dos perfis		(GET)    => https://srvwebservice.herokuapp.com/api/v1/perfils
+- Cadastro do perfil			(POST)   => https://srvwebservice.herokuapp.com/api/v1/perfils
+- Listagem de um perfil 		(GET)    => https://srvwebservice.herokuapp.com/api/v1/perfils/id
+- Atualizar um perfil 			(PUT)    => https://srvwebservice.herokuapp.com/api/v1/perfils/id
 
-### CADASTRO DO PERFIL - POST 
-https://srvwebservice.herokuapp.com/api/v1/perfils
+### JOGO_PERFIL ###
+- Listagem geral dos jogos_perfis	(GET)    => https://srvwebservice.herokuapp.com/api/v1/jogo_perfils
+- Cadastro do jogo_perfil		(POST)   => https://srvwebservice.herokuapp.com/api/v1/jogo_perfils
+- Listagem de um jogo_perfil 		(GET)    => https://srvwebservice.herokuapp.com/api/v1/jogo_perfils/id
+- Excluir um jogo_perfil		(DELETE) => https://srvwebservice.herokuapp.com/api/v1/jogo_perfils/id
 
-### ATUALIZACAO DO PERFIL - PUT
-https://srvwebservice.herokuapp.com/api/v1/perfils/:id
+### TROCA JOGO ###
+- Listagem geral dos trocajogos		(GET)    => https://srvwebservice.herokuapp.com/api/v1/trocajogos
+- Cadastro do trocajogo		 	(POST)   => https://srvwebservice.herokuapp.com/api/v1/trocajogos
+- Listagem de um trocajogo 		(GET)    => https://srvwebservice.herokuapp.com/api/v1/trocajogos/id
+- Atualizar um trocajogo 		(PUT)    => https://srvwebservice.herokuapp.com/api/v1/trocajogos/id
+- Excluir um trocajogo 			(DELETE) => https://srvwebservice.herokuapp.com/api/v1/trocajogos/id
 
+### PROPOSTA JOGO ###
+- Listagem geral dos propostajogos	(GET)    => https://srvwebservice.herokuapp.com/api/v1/propostajogos
+- Cadastro do propostajogo		(POST)   => https://srvwebservice.herokuapp.com/api/v1/propostajogos
+- Listagem de um propostajogo 		(GET)    => https://srvwebservice.herokuapp.com/api/v1/propostajogos/id
+- Atualizar um propostajogo 		(PUT)    => https://srvwebservice.herokuapp.com/api/v1/propostajogos/id
+- Excluir um propostajogo 		(DELETE) => https://srvwebservice.herokuapp.com/api/v1/propostajogos/id
