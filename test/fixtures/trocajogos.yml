@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jogo_perfil_id: 1
+  propostajogo_id: 1
+  avaliacao: 1
+  dt_troca: 2015-10-17
+  finalizado: false
+
+two:
+  jogo_perfil_id: 1
+  propostajogo_id: 1
+  avaliacao: 1
+  dt_troca: 2015-10-17
+  finalizado: false

@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013215715) do
+ActiveRecord::Schema.define(version: 20151017084411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "jogo_perfils", force: :cascade do |t|
+    t.integer  "jogo_id"
+    t.integer  "perfil_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "jogos", force: :cascade do |t|
     t.string   "descricao"
@@ -32,6 +39,26 @@ ActiveRecord::Schema.define(version: 20151013215715) do
     t.string   "senha"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "propostajogos", force: :cascade do |t|
+    t.integer  "jogo_perfil_id"
+    t.integer  "trocajogo_id"
+    t.integer  "avaliacao"
+    t.date     "dt_troca"
+    t.boolean  "finalizado"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "trocajogos", force: :cascade do |t|
+    t.integer  "jogo_perfil_id"
+    t.integer  "propostajogo_id"
+    t.integer  "avaliacao"
+    t.date     "dt_troca"
+    t.boolean  "finalizado"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

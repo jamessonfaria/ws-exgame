@@ -16,15 +16,24 @@ class Api::V1::PerfilsController < Api::V1::BaseController
     end
 
     def update
-            perfil = Perfil.find(params[:id])
-            puts {perfil}
-
-            perfil = Perfil.update(params[:perfil])
-            if perfil.valid?
-                    respond_with(perfil, :location => api_v1_perfil_path(perfil))
+            set_perfil
+            @perfil.update(params[:perfil])
+            if @perfil.valid?
+                    respond_with(@perfil, :location => api_v1_perfil_path(@perfil))
             else
-                    respond_with(perfil)
+                    respond_with(@perfil)
             end
+    end
+
+    def show
+            set_perfil
+            respond_with @perfil
+    end
+
+    private
+
+    def set_perfil
+        @perfil = Perfil.find(params[:id])
     end
 
 end

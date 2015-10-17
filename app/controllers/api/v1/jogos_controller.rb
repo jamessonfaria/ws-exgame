@@ -5,5 +5,10 @@ class Api::V1::JogosController < Api::V1::BaseController
         respond_with jogos
     end
 
+    def show
+        jogo = Jogo.find(params[:id])
+        respond_with jogo
+    end
+
 end
 
