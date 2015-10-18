@@ -26,6 +26,18 @@ class Api::V1::JogoPerfilsController < Api::V1::BaseController
         respond_with "Item excluido com sucesso !!!"
     end
 
+    def busca_usuarios_por_jogo
+        jogos = JogoPerfil.where(:jogo_id => params[:id].to_i)
+        arrUsuarios = []
+
+        jogos.each do |jogo|
+            usuario = Perfil.where(:id => jogo.perfil_id)
+            arrUsuarios << {:jogo_perfil_id => jogo.id, :usuario => usuario}
+        end
+
+        render :json => arrUsuarios.as_json
+    end
+
     private
 
     def set_jogoperfil
