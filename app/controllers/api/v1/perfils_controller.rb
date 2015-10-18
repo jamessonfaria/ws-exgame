@@ -19,7 +19,8 @@ class Api::V1::PerfilsController < Api::V1::BaseController
             set_perfil
             @perfil.update(params[:perfil])
             if @perfil.valid?
-                    respond_with(@perfil, :location => api_v1_perfil_path(@perfil))
+                   # respond_with(@perfil, :location => api_v1_perfils_path(@perfil))
+                    render :json => @perfil.as_json
             else
                     respond_with(@perfil)
             end
