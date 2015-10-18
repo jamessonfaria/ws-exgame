@@ -27,16 +27,27 @@ class Api::V1::JogoPerfilsController < Api::V1::BaseController
     end
 
     def busca_usuarios_por_jogo
-        jogos = JogoPerfil.where(:jogo_id => params[:id].to_i)
+        jogoPerfils = JogoPerfil.where(:jogo_id => params[:id].to_i)
         arrUsuarios = []
 
-        jogos.each do |jogo|
-
-            usuario = Perfil.where(:id => jogo.perfil_id).last
-            arrUsuarios << {:jogo_perfil_id => jogo.id, :usuario_id => jogo.perfil_id, :nome => usuario.nome, :cidade => usuario.cidade, :estado => usuario.estado}
+        jogoPerfils.each do |jogoPerfil|
+            usuario = Perfil.where(:id => jogoPerfil.perfil_id).last
+            arrUsuarios << {:jogo_perfil_id => jogoPerfil.id, :usuario_id => jogoPerfil.perfil_id, :nome => usuario.nome, :cidade => usuario.cidade, :estado => usuario.estado}
         end
 
         render :json => arrUsuarios.as_json
+    end
+
+    def busca_jogos_por_usuario
+        jogoPerfils = JogoPerfil.where(:perfil_id => params[:id].to_i)
+        arrJogos = []
+
+        jogoPerfils.each do |jogoPerfil|
+            jogo = Jogo.where(:id => jogoPerfil.jogo_id).last
+            arrJogos << {:jogo_perfil_id => jogoPerfil.id, :jogo_id => jogoPerfil.jogo_id, :descricao => jogo.descricao, :console => jogo.console, :foto => jogo.foto}
+        end
+
+        render :json => arrJogos.as_json
     end
 
     private

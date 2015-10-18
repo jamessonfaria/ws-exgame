@@ -9,6 +9,7 @@ Rails.application.routes.draw do
             resources :propostajogos, defaults: {format: 'json'}, only: [:index, :create, :destroy, :update, :show]
 
             get "usuarios_por_jogo/:id", :controller => "jogo_perfils", :action => "busca_usuarios_por_jogo", as: :usuarios_por_jogo
+            get "jogos_por_usuario/:id", :controller => "jogo_perfils", :action => "busca_jogos_por_usuario", as: :jogos_por_usuario
         end
     end
 
