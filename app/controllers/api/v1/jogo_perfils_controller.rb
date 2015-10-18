@@ -31,8 +31,9 @@ class Api::V1::JogoPerfilsController < Api::V1::BaseController
         arrUsuarios = []
 
         jogos.each do |jogo|
-            usuario = Perfil.where(:id => jogo.perfil_id)
-            arrUsuarios << {:jogo_perfil_id => jogo.id, :usuario => usuario}
+
+            usuario = Perfil.where(:id => jogo.perfil_id).last
+            arrUsuarios << {:jogo_perfil_id => jogo.id, :usuario_id => jogo.perfil_id, :nome => usuario.nome, :cidade => usuario.cidade, :estado => usuario.estado}
         end
 
         render :json => arrUsuarios.as_json
